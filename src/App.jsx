@@ -1,4 +1,157 @@
+import { useMemo, useState } from "react";
+
 export default function PortfolioJorgePrieto() {
+  const [language, setLanguage] = useState("es");
+
+  const content = useMemo(() => ({
+    es: {
+      badge: "Desarrollo web · Ciberseguridad · Perfil técnico junior",
+      heroTitle: "Jorge Prieto",
+      heroLead:
+        "Desarrollador web con formación en ciberseguridad, experiencia en desarrollo de aplicaciones web y orientación a construir soluciones funcionales, seguras y bien presentadas.",
+      viewProjects: "Ver proyectos",
+      contact: "Contacto",
+      languageButton: "EN",
+      stats: [
+        { label: "Especialidad", value: "Desarrollo + Seguridad" },
+        { label: "Ubicación", value: "Madrid, España" },
+        { label: "Stack", value: "Frontend, Backend y APIs" },
+        { label: "Perfil", value: "Junior con base sólida" },
+      ],
+      aboutKicker: "Sobre mí",
+      aboutTitle: "Perfil técnico con visión práctica",
+      aboutParagraphs: [
+        "Soy Técnico Superior en Desarrollo de Aplicaciones Web y he completado una formación profesional en ciberseguridad orientada a pentesting, auditoría informática, análisis de vulnerabilidades y respuesta ante ataques.",
+        "He trabajado en Verne Technology Group en gestión de proyectos, desarrollo de aplicaciones web y apoyo en ciberseguridad empresarial. Busco seguir creciendo en entornos donde pueda combinar programación, análisis técnico, seguridad y experiencia de usuario.",
+      ],
+      skillsTitle: "Tecnologías y herramientas",
+      experienceKicker: "Experiencia y formación",
+      experienceTitle: "Base técnica y recorrido",
+      experience: [
+        {
+          title: "Verne Technology Group",
+          text: "Desarrollo de aplicaciones web, gestión de proyectos y apoyo en ciberseguridad en un entorno profesional de telecomunicaciones.",
+        },
+        {
+          title: "Máster Profesional en Ciberseguridad y Asesoría Web",
+          text: "Formación práctica en hacking, pentesting, auditoría informática, forense, gestión de identidades, análisis de sistemas e implementación de medidas de seguridad.",
+        },
+        {
+          title: "Técnico Superior en Desarrollo de Aplicaciones Web",
+          text: "Base sólida en desarrollo web, lógica de programación, bases de datos y construcción de aplicaciones funcionales.",
+        },
+      ],
+      projectsKicker: "Proyectos destacados",
+      projectsTitle: "Trabajo y líneas que me representan",
+      projects: [
+        {
+          title: "Auditorías web y análisis de vulnerabilidades",
+          description:
+            "Prácticas orientadas a identificar vulnerabilidades en servicios web, analizar riesgos y redactar informes claros para perfiles no técnicos.",
+          tags: ["OWASP", "ZAP", "Pentesting", "Informes técnicos"],
+        },
+        {
+          title: "Desarrollo de aplicaciones web",
+          description:
+            "Proyectos académicos y prácticos centrados en frontend, backend, APIs REST y bases de datos, con foco en funcionalidad y estructura limpia.",
+          tags: ["JavaScript", "PHP", "Python", "SQL"],
+        },
+        {
+          title: "Portfolio profesional en React",
+          description:
+            "Web personal diseñada para mostrar perfil, tecnologías, experiencia y proyectos, con una estructura clara y preparada para crecer con demos reales.",
+          tags: ["React", "Vite", "UI", "Responsive"],
+        },
+      ],
+      languagesKicker: "Idiomas",
+      languagesTitle: "Comunicación internacional",
+      languages: [
+        { name: "Inglés", level: "C1 · Alto hablado, escrito y lectura" },
+        { name: "Francés", level: "B1 · Nivel medio / medio-alto" },
+      ],
+      contactKicker: "Contacto",
+      contactTitle: "Disponible para nuevas oportunidades",
+      contactText:
+        "Este portfolio ya permite cambiar entre español e inglés. El siguiente paso será añadir proyectos reales, vistas previas, enlaces a GitHub, CV descargable y una versión aún más orientada a recruiters.",
+      emailButton: "Enviar email",
+      linksButton: "LinkedIn / GitHub",
+    },
+    en: {
+      badge: "Web development · Cybersecurity · Junior technical profile",
+      heroTitle: "Jorge Prieto",
+      heroLead:
+        "Web developer with cybersecurity training, experience in web application development, and a strong focus on building functional, secure, and well-presented solutions.",
+      viewProjects: "View projects",
+      contact: "Contact",
+      languageButton: "ES",
+      stats: [
+        { label: "Specialty", value: "Development + Security" },
+        { label: "Location", value: "Madrid, Spain" },
+        { label: "Stack", value: "Frontend, Backend and APIs" },
+        { label: "Profile", value: "Junior with solid foundations" },
+      ],
+      aboutKicker: "About me",
+      aboutTitle: "Technical profile with a practical mindset",
+      aboutParagraphs: [
+        "I hold a Higher Technician qualification in Web Application Development and I have completed professional cybersecurity training focused on pentesting, IT auditing, vulnerability analysis, and incident response.",
+        "I have worked at Verne Technology Group in project management, web application development, and cybersecurity support. I am looking to continue growing in environments where I can combine programming, technical analysis, security, and user experience.",
+      ],
+      skillsTitle: "Technologies and tools",
+      experienceKicker: "Experience and education",
+      experienceTitle: "Technical background and journey",
+      experience: [
+        {
+          title: "Verne Technology Group",
+          text: "Web application development, project management, and cybersecurity support in a professional telecommunications environment.",
+        },
+        {
+          title: "Professional Diploma in Cybersecurity and Web Advisory",
+          text: "Hands-on training in hacking, pentesting, IT auditing, forensics, identity management, systems analysis, and security implementation.",
+        },
+        {
+          title: "Higher Technician in Web Application Development",
+          text: "Strong foundation in web development, programming logic, databases, and building functional applications.",
+        },
+      ],
+      projectsKicker: "Featured projects",
+      projectsTitle: "Work and areas that represent me",
+      projects: [
+        {
+          title: "Web audits and vulnerability analysis",
+          description:
+            "Practice projects focused on identifying vulnerabilities in web services, assessing risks, and writing clear reports for non-technical audiences.",
+          tags: ["OWASP", "ZAP", "Pentesting", "Technical reports"],
+        },
+        {
+          title: "Web application development",
+          description:
+            "Academic and practical projects focused on frontend, backend, REST APIs, and databases, with emphasis on functionality and clean structure.",
+          tags: ["JavaScript", "PHP", "Python", "SQL"],
+        },
+        {
+          title: "Professional portfolio in React",
+          description:
+            "Personal website designed to showcase profile, technologies, experience, and projects, with a clear structure ready to grow with real demos.",
+          tags: ["React", "Vite", "UI", "Responsive"],
+        },
+      ],
+      languagesKicker: "Languages",
+      languagesTitle: "International communication",
+      languages: [
+        { name: "English", level: "C1 · High spoken, written and reading level" },
+        { name: "French", level: "B1 · Intermediate / upper-intermediate" },
+      ],
+      contactKicker: "Contact",
+      contactTitle: "Open to new opportunities",
+      contactText:
+        "This portfolio already supports switching between Spanish and English. The next step will be adding real projects, previews, GitHub links, a downloadable CV, and an even stronger recruiter-focused version.",
+      emailButton: "Send email",
+      linksButton: "LinkedIn / GitHub",
+    },
+  }), []);
+
+  const t = content[language];
+
   const skills = [
     "HTML",
     "CSS",
@@ -8,51 +161,17 @@ export default function PortfolioJorgePrieto() {
     "PHP",
     "Python",
     ".NET / C#",
-    "SQL Server",
-    "MySQL",
+    "SQL",
     "MongoDB",
+    "Figma",
+    "WordPress",
+    "Canva",
     "Git",
     "Azure DevOps",
     "Jenkins",
     "OWASP ZAP",
     "Wireshark",
     "Kali Linux",
-  ];
-
-  const projects = [
-    {
-      title: "Auditorías web y análisis de vulnerabilidades",
-      description:
-        "Prácticas orientadas a la identificación de vulnerabilidades en servicios web, análisis técnico y redacción de informes claros para perfiles no técnicos, siguiendo enfoques basados en OWASP.",
-      tags: ["OWASP", "ZAP", "Pentesting", "Informes técnicos"],
-    },
-    {
-      title: "Desarrollo de aplicaciones web",
-      description:
-        "Experiencia académica y práctica construyendo aplicaciones web con tecnologías de frontend y backend, consumo de APIs REST y trabajo con bases de datos relacionales.",
-      tags: ["Angular", "JavaScript", ".NET/C#", "SQL Server"],
-    },
-    {
-      title: "Proyecto interactivo de simulación histórica",
-      description:
-        "Conceptualización y prototipado de experiencias interactivas centradas en visualización histórica y navegación digital, combinando parte visual, lógica y experiencia de usuario.",
-      tags: ["Unity", "UX/UI", "Simulación", "Prototipado"],
-    },
-  ];
-
-  const experience = [
-    {
-      title: "Prácticas – Verne Technology Group",
-      text: "Participación en desarrollo y gestión de aplicaciones web, trabajo con bases de datos y apoyo en tareas técnicas relacionadas con frontend, backend y APIs REST.",
-    },
-    {
-      title: "Formación en Ciberseguridad",
-      text: "Especialización práctica en pentesting, auditoría, análisis de seguridad de sistemas, identificación de vulnerabilidades y propuestas de mitigación.",
-    },
-    {
-      title: "Técnico Superior en Desarrollo de Aplicaciones Web",
-      text: "Base sólida en desarrollo web, diseño de aplicaciones, estructura de datos, lógica de programación y tecnologías modernas del entorno web.",
-    },
   ];
 
   return (
@@ -67,6 +186,7 @@ export default function PortfolioJorgePrieto() {
           color: #e6eef8;
         }
         a { text-decoration: none; }
+        button { font: inherit; }
         .portfolio {
           min-height: 100vh;
           background:
@@ -78,8 +198,27 @@ export default function PortfolioJorgePrieto() {
           width: min(1120px, calc(100% - 32px));
           margin: 0 auto;
         }
+        .topbar {
+          padding-top: 18px;
+          display: flex;
+          justify-content: flex-end;
+        }
+        .lang-switch {
+          border: 1px solid rgba(255,255,255,0.12);
+          background: rgba(255,255,255,0.05);
+          color: #e8f0f8;
+          border-radius: 14px;
+          padding: 10px 14px;
+          cursor: pointer;
+          transition: transform .18s ease, background .18s ease, border-color .18s ease;
+        }
+        .lang-switch:hover {
+          transform: translateY(-2px);
+          border-color: rgba(34, 211, 238, 0.35);
+          background: rgba(34, 211, 238, 0.08);
+        }
         .hero {
-          padding: 88px 0 72px;
+          padding: 36px 0 72px;
           border-bottom: 1px solid rgba(255,255,255,0.08);
         }
         .hero-grid {
@@ -219,12 +358,14 @@ export default function PortfolioJorgePrieto() {
           color: white;
         }
         .skills-list,
-        .tag-list {
+        .tag-list,
+        .lang-list {
           display: flex;
           flex-wrap: wrap;
           gap: 12px;
         }
-        .skill-pill {
+        .skill-pill,
+        .lang-pill {
           padding: 10px 14px;
           border-radius: 999px;
           background: rgba(34, 211, 238, 0.10);
@@ -294,7 +435,7 @@ export default function PortfolioJorgePrieto() {
             grid-template-columns: 1fr;
           }
           .hero {
-            padding-top: 72px;
+            padding-top: 24px;
           }
         }
         @media (max-width: 640px) {
@@ -316,38 +457,33 @@ export default function PortfolioJorgePrieto() {
 
       <div className="portfolio">
         <section className="hero">
+          <div className="container topbar">
+            <button
+              className="lang-switch"
+              onClick={() => setLanguage((prev) => (prev === "es" ? "en" : "es"))}
+            >
+              {t.languageButton}
+            </button>
+          </div>
+
           <div className="container hero-grid">
             <div>
-              <div className="eyebrow">Desarrollo web · Ciberseguridad · Perfil técnico junior</div>
-              <h1>Jorge Prieto</h1>
-              <p className="lead">
-                Desarrollador web con formación en ciberseguridad, experiencia en tecnologías
-                frontend y backend y orientación a construir soluciones funcionales, seguras y
-                bien presentadas.
-              </p>
+              <div className="eyebrow">{t.badge}</div>
+              <h1>{t.heroTitle}</h1>
+              <p className="lead">{t.heroLead}</p>
               <div className="hero-actions">
-                <a href="#proyectos" className="btn-primary">Ver proyectos</a>
-                <a href="#contacto" className="btn-secondary">Contacto</a>
+                <a href="#proyectos" className="btn-primary">{t.viewProjects}</a>
+                <a href="#contacto" className="btn-secondary">{t.contact}</a>
               </div>
             </div>
 
             <div className="hero-panel">
-              <div className="stat-card">
-                <span>Especialidad</span>
-                <strong>Desarrollo + Seguridad</strong>
-              </div>
-              <div className="stat-card">
-                <span>Ubicación</span>
-                <strong>Madrid, España</strong>
-              </div>
-              <div className="stat-card">
-                <span>Stack</span>
-                <strong>Frontend, Backend y APIs</strong>
-              </div>
-              <div className="stat-card">
-                <span>Perfil</span>
-                <strong>Junior con base sólida</strong>
-              </div>
+              {t.stats.map((item) => (
+                <div key={item.label} className="stat-card">
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -356,25 +492,16 @@ export default function PortfolioJorgePrieto() {
           <div className="container about-grid">
             <div className="about-text">
               <div className="section-header">
-                <p className="section-kicker">Sobre mí</p>
-                <h2>Perfil técnico con visión práctica</h2>
+                <p className="section-kicker">{t.aboutKicker}</p>
+                <h2>{t.aboutTitle}</h2>
               </div>
-              <p>
-                He desarrollado mi perfil entre el desarrollo de aplicaciones web y la
-                ciberseguridad. Cuento con formación en desarrollo web, experiencia práctica en
-                entornos reales y una orientación clara hacia la mejora continua, el aprendizaje
-                técnico y la creación de soluciones útiles.
-              </p>
-              <p>
-                Me interesa especialmente combinar una buena base de programación con una visión de
-                seguridad, calidad técnica y experiencia de usuario. Busco seguir creciendo en
-                proyectos donde pueda aportar tanto en la parte funcional como en la parte
-                analítica.
-              </p>
+              {t.aboutParagraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             <div className="card">
-              <h3>Tecnologías y herramientas</h3>
+              <h3>{t.skillsTitle}</h3>
               <div className="skills-list">
                 {skills.map((skill) => (
                   <span key={skill} className="skill-pill">{skill}</span>
@@ -387,12 +514,12 @@ export default function PortfolioJorgePrieto() {
         <section id="experiencia" className="section section-alt">
           <div className="container">
             <div className="section-header">
-              <p className="section-kicker">Experiencia y formación</p>
-              <h2>Base técnica y recorrido</h2>
+              <p className="section-kicker">{t.experienceKicker}</p>
+              <h2>{t.experienceTitle}</h2>
             </div>
 
             <div className="grid-3">
-              {experience.map((item) => (
+              {t.experience.map((item) => (
                 <article key={item.title} className="info-card">
                   <h3>{item.title}</h3>
                   <p>{item.text}</p>
@@ -405,12 +532,12 @@ export default function PortfolioJorgePrieto() {
         <section id="proyectos" className="section">
           <div className="container">
             <div className="section-header">
-              <p className="section-kicker">Proyectos destacados</p>
-              <h2>Trabajo y líneas que me representan</h2>
+              <p className="section-kicker">{t.projectsKicker}</p>
+              <h2>{t.projectsTitle}</h2>
             </div>
 
             <div className="grid-3">
-              {projects.map((project) => (
+              {t.projects.map((project) => (
                 <article key={project.title} className="project-card">
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
@@ -425,20 +552,32 @@ export default function PortfolioJorgePrieto() {
           </div>
         </section>
 
+        <section className="section section-alt">
+          <div className="container">
+            <div className="section-header">
+              <p className="section-kicker">{t.languagesKicker}</p>
+              <h2>{t.languagesTitle}</h2>
+            </div>
+            <div className="lang-list">
+              {t.languages.map((item) => (
+                <span key={item.name} className="lang-pill">
+                  {item.name}: {item.level}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section id="contacto" className="section section-alt">
           <div className="container contact-box">
             <div className="section-header">
-              <p className="section-kicker">Contacto</p>
-              <h2>Disponible para nuevas oportunidades</h2>
+              <p className="section-kicker">{t.contactKicker}</p>
+              <h2>{t.contactTitle}</h2>
             </div>
-            <p>
-              Este portfolio puede ampliarse con proyectos reales, enlaces a GitHub, CV
-              descargable, formulario de contacto, versión en inglés y secciones personalizadas
-              según el tipo de puesto al que quieras optar.
-            </p>
+            <p>{t.contactText}</p>
             <div className="hero-actions" style={{ justifyContent: "center" }}>
-              <a href="mailto:tuemail@ejemplo.com" className="btn-primary">Enviar email</a>
-              <a href="#" className="btn-secondary">LinkedIn / GitHub</a>
+              <a href="mailto:jorgepri105@gmail.com" className="btn-primary">{t.emailButton}</a>
+              <a href="#" className="btn-secondary">{t.linksButton}</a>
             </div>
           </div>
         </section>
